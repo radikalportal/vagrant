@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DB_FILENAME=radikalportal.sql.gz
-NGINX_CONF_FILENAME=radikalportal.no
+NGINX_CONF_FILENAME=dev.radikalportal
 
 export DEBIAN_FRONTEND=noninteractive
 
@@ -18,8 +18,8 @@ echo "drop database if exists radikalportal; create database radikalportal;" | m
 cat /vagrant/$DB_FILENAME | gzip -d | mysql -u root radikalportal
 
 # Setup db
-echo "update wp_options set option_value='http://dev.radikalportal.no/' where option_name='home';" | mysql -u root radikalportal
-echo "update wp_options set option_value='http://dev.radikalportal.no/' where option_name='siteurl';" | mysql -u root radikalportal
+echo "update wp_options set option_value='http://dev.radikalportal/' where option_name='home';" | mysql -u root radikalportal
+echo "update wp_options set option_value='http://dev.radikalportal/' where option_name='siteurl';" | mysql -u root radikalportal
 echo "update wp_users set user_pass=md5('123456');" | mysql -u root radikalportal
 
 # Setup nginx conf
