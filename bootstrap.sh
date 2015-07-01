@@ -27,5 +27,13 @@ ln -fs /vagrant/$NGINX_CONF_FILENAME /etc/nginx/sites-available/
 ln -fs /etc/nginx/sites-available/$NGINX_CONF_FILENAME /etc/nginx/sites-enabled/
 rm -f /etc/nginx/sites-enabled/default
 
+# Last ned wp-cli
+curl -sO https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+
+# Deaktiver plugins
+sudo -u vagrant -i -- wp --path=/var/www/ plugin deactivate w3-total-cache
+
 # Restart nginx
 service nginx restart
