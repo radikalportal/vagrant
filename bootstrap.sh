@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 DB_FILENAME=radikalportal.sql.gz
-NGINX_CONF_FILENAME=dev.radikalportal
 
 export DEBIAN_FRONTEND=noninteractive
 
@@ -23,8 +22,8 @@ echo "update wp_options set option_value='http://dev.radikalportal/' where optio
 echo "update wp_users set user_pass=md5('123456');" | mysql -u root radikalportal
 
 # Setup nginx conf
-ln -fs /vagrant/$NGINX_CONF_FILENAME /etc/nginx/sites-available/
-ln -fs /etc/nginx/sites-available/$NGINX_CONF_FILENAME /etc/nginx/sites-enabled/
+ln -fs /vagrant/dev.radikalportal /etc/nginx/sites-available/
+ln -fs /etc/nginx/sites-available/dev.radikalportal /etc/nginx/sites-enabled/
 rm -f /etc/nginx/sites-enabled/default
 
 # Last ned wp-cli
