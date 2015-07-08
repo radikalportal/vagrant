@@ -13,7 +13,7 @@ For at oppsettet skal bli riktig er det nødvendig at alle filene er på plass o
 vagrant
 |-- README.md
 |-- Vagrantfile
-|-- bootstrap.sh
+|-- setup.sh
 |-- dev.radikalportal
 |-- hosts
 |-- radikalportal
