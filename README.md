@@ -13,11 +13,11 @@ For at oppsettet skal bli riktig er det nødvendig at alle filene er på plass o
 vagrant
 |-- README.md
 |-- Vagrantfile
-|-- setup.sh
 |-- dev.radikalportal
 |-- hosts
 |-- radikalportal
 |-- radikalportal.sql.gz
+|-- setup.sh
 |-- uploads
 `-- wp-config.php
 ```
