@@ -1,0 +1,3 @@
+[submodule "radikalportal"]
+	path = radikalportal
+	url = https://github.com/radikalportal/radikalportal.git
