@@ -83,8 +83,8 @@ define('WPLANG', 'nb_NO');
 define('WP_DEBUG', true);
 
 $envs = array(
-    'utvikling' => 'http://dev.radikalportal',
-    'testing'  => 'http://beta.radikalportal.no',
+    'utvikling'   => 'http://dev.radikalportal',
+    'testing'     => 'http://beta.radikalportal.no',
     'produksjon'  => 'http://radikalportal.no'
 );
 define('ENVIRONMENTS', serialize($envs));
