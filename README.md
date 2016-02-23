@@ -1,7 +1,7 @@
 # Oppsett av utviklingsmiljø med Vagrant
 
-1. Kjør `git clone https://github.com/radikalportal/vagrant.git; cd vagrant`.
-2. Klon radikalportal-repoet i mappen.
+1. Kjør `git clone --recursive https://github.com/radikalportal/vagrant.git`.
+2. Gå inn i vagrant-mapppen ved å kjøre `cd vagrant`.
 3. Flytt radikalportal.sql.gz og uploads-mappen til vagrant-mappen.
 4. Kjør `vagrant up`.
 5. Rediger hosts-filen slik at dev.radikalportal er et domene for 192.168.33.10.
